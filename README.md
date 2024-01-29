@@ -2,6 +2,8 @@
   ## Description
   Team Profile Generator is a Node.js command-line application which collects the details of the engineering team and generates an HTML webpage that displays the team's basic info so that a user have quick access to their emails and GitHub profiles. This app has been created using Test Driven Development, which includes test files showcasing every part of the code that passed each provided test.
 
+![HTML webpage titled “My Team” features boxes listing employee names, titles, and other key info.](./assets/team-profile-generator-TDD.png)
+
 ## Table of contents
 - [Installation](#installation)
 - [Usage](#usage)
