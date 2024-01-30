@@ -13,7 +13,7 @@ const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
-{ name, role, id, email, github, shcool }
+[name, role, id, email, github, shcool]
 
 
 // Questions for the managers
