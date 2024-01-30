@@ -1,0 +1,19 @@
+{
+  "name": "team--profile-generator",
+  "version": "1.0.0",
+  "description": "Team Profile Generator is a Node.js command-line application which collects the details of the engineering team and generates an HTML webpage that displays the team's basic info so that a user have quick access to their emails and GitHub profiles. This app has been created using Test Driven Development, which includes test files showcasing every part of the code that passed each provided test.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.13",
+    "jest": "^29.7.0"
+  }
+}
