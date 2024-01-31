@@ -13,7 +13,6 @@ const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
-[name, role, id, email, github, shcool]
 
 
 // Questions for the managers
@@ -23,6 +22,85 @@ const questionManagers = [
         name: "name",
         message: "What is the manager's name?",
 
-    }
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "What is your id?",
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "What is your email?",
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "What is your office number?",
+    },
+];
+
+// Question for the role.
+const questionRole = [
+    {
+        type: "list",
+        name: "choice",
+        message: "Add your role.",
+        choices: ["Manager", "Engineer", "Intern"],
+        when: answer == "Manager"  =>
+        when: answer == "Engineer"  =>
+        when: answer == "Intern"  => 
+    },
 ]
 
+
+// Questions for the engineer.
+const questionEngineer = [
+    {
+        type: "input",
+        name: "name",
+        message: "What is the engineer's name?",
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "What is your engineer's id?",
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "What is your engineer's email address?",
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "What is your engineer's github user name?",
+    },
+];
+
+// Questions for the Intern.
+const questionIntern = [
+    {
+        type: "input",
+        name: "name",
+        message: "What is the intern's name?",
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "What is your intern's id?",
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "What is your intern's email address?",
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "What is your intern's school?",
+    },
+];
+
+// Output directory
+fs.writefile 
