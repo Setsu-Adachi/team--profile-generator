@@ -9,98 +9,83 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
-
+const team = [];
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
 
 
-// Questions for the managers
-const questionManagers = [
+
+
+// Question for the role.
+const questions = [
     {
         type: "input",
         name: "name",
-        message: "What is the manager's name?",
+        message: "What is your name?",
 
     },
     {
         type: "input",
-        name: "name",
+        name: "id",
         message: "What is your id?",
     },
     {
         type: "input",
-        name: "name",
+        name: "email",
         message: "What is your email?",
     },
     {
-        type: "input",
-        name: "name",
-        message: "What is your office number?",
-    },
-];
-
-// Question for the role.
-const questionRole = [
-    {
         type: "list",
-        name: "choice",
+        name: "role",
         message: "Add your role.",
         choices: ["Manager", "Engineer", "Intern"],
-        when: answer == "Manager"  =>
-        when: answer == "Engineer"  =>
-        when: answer == "Intern"  => 
-    },
-]
 
-
-// Questions for the engineer.
-const questionEngineer = [
-    {
-        type: "input",
-        name: "name",
-        message: "What is the engineer's name?",
     },
     {
         type: "input",
-        name: "name",
-        message: "What is your engineer's id?",
-    },
-    {
-        type: "input",
-        name: "name",
-        message: "What is your engineer's email address?",
+        name: "number",
+        message: "What is your office number?",
+        when: function (answers) {
+            if (answers.role === "Manager") {
+                return true
+            }
+            return false
+        }
     },
     {
         type: "input",
         name: "name",
         message: "What is your engineer's github user name?",
-    },
-];
-
-// Questions for the Intern.
-const questionIntern = [
-    {
-        type: "input",
-        name: "name",
-        message: "What is the intern's name?",
-    },
-    {
-        type: "input",
-        name: "name",
-        message: "What is your intern's id?",
-    },
-    {
-        type: "input",
-        name: "name",
-        message: "What is your intern's email address?",
+                when: function (answers) {
+            if (answers.role === "Engineer") {
+                return true
+            }
+            return false
+        }
     },
     {
         type: "input",
         name: "name",
         message: "What is your intern's school?",
+        when: function (answers) {
+            if (answers.role === "Intern") {
+                return true
+            }
+            return false
+        }
     },
-];
+]
 
+inquirer.prompt(questions) 
+.then(function(answers){
+// Make new empolyee based on the role, New Manager, New Intern, New Eng, 
+// add on the list of the team member
+
+// ask to add another employee
+})
+.then(function(){
+fs.writeFile(outputPath, render(team));
+});
 // Output directory
-fs.writefile ()
+// 
