@@ -103,4 +103,4 @@ const questionIntern = [
 ];
 
 // Output directory
-fs.writefile 
+fs.writefile ()
