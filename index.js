@@ -104,7 +104,7 @@ inquirer.prompt([
     
         }
         else{
-            writeFile();
+            writeFile()
         }
     }
 )
@@ -112,6 +112,6 @@ inquirer.prompt([
 }
 // Output directory
 function writeFile(){
-    fs.writeFile(outputPath, render(team))
+    fs.writeFileSync(outputPath, render(team));
 }
 askQuestion()
