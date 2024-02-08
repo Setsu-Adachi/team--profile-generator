@@ -28,7 +28,7 @@ node index.js
   ## Contributing
   Setsu Adachi
   ## Tests
-  https://setsu-adachi.github.io/team--profile-generator/
+  https://stackblitz.com/~/github.com/Setsu-Adachi/team--profile-generator
   ## Questions
   https://github.com/Setsu-Adachi
 
